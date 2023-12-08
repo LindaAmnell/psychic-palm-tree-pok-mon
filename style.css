@@ -1,0 +1,54 @@
+* {
+  box-sizing: 0;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(241, 41, 41);
+  height: 10em;
+  /* width: auto; */
+  border-bottom: solid black 5px;
+}
+body {
+  background-color: #eae5e5;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokeboll {
+  background-color: white;
+  height: 8em;
+  width: 8em;
+  border-radius: 11em;
+  position: relative;
+  left: 7em;
+  top: 5em;
+  border: solid black 5px;
+}
+h1 {
+  font-size: 40px;
+}
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
+}
+.hide {
+  display: none;
+}
+h2 {
+  margin-top: 7em;
+}
+#start-button {
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 2em;
+  border-radius: 1em;
+  background-color: #9d9a9a;
+  color: white;
+}

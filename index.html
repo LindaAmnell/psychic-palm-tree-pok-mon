@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokèmon Search</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="serch-screen.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="pokeboll"></div>
+    </header>
+    <main>
+      <section class="start-screen">
+        <h1>Pokémon</h1>
+        <h2>Välj ut ditt Pokémon lag</h2>
+        <button id="start-button">Start</button>
+      </section>
+      <section class="search-screen">
+        <div class="search-container">
+          <label id="pokèmon-search" for="search-pokémon"
+            >Välj ut dina Pokémon här</label
+          >
+          <input id="search-pokémon" type="search" />
+          <button id="search-button">sök</button>
+        </div>
+        <div id="pokèmon">
+          <ol id="pokèmon-list"></ol>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
