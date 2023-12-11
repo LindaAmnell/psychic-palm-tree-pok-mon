@@ -29,10 +29,13 @@
   padding: 1em;
 }
 li {
-  height: 6em;
-  width: 6em;
+  /* height: 6em;
+  width: 6em; */
   background-color: #9d9a9a;
   margin: 0.3em;
+}
+li > img {
+  width: 50%;
 }
 ol {
   display: flex;
