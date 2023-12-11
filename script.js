@@ -35,7 +35,6 @@ startbtn.addEventListener("click", async () => {
             return {
               name: pokemon.name.toLowerCase(),
               url: pokemon.url,
-              bild: "./bilder/anonymbild.jpg",
             };
           }
 
@@ -63,12 +62,22 @@ searchInput.addEventListener("keyup", async () => {
   searchInfo.forEach((pokemon) => {
     const element = document.createElement("li");
     const button = document.createElement("button");
-    const bild = document.createElement("img");
-    bild.src = `${pokemon.bild}`;
-    element.innerText = `${pokemon.name}`;
-    pokemonContainer.appendChild(element);
+
+    if (pokemon.bild) {
+      const bild = document.createElement("img");
+      bild.src = `${pokemon.bild}`;
+      element.innerText = `${pokemon.name}`;
+      element.appendChild(bild);
+    } else {
+      const bild2 = document.createElement("img");
+      bild2.src = "./bilder/anonymbild.jpg";
+      element.innerText = `${pokemon.name}`;
+      element.appendChild(bild2);
+      bild2.classList.add("bild2");
+    }
+
     element.appendChild(button);
-    element.appendChild(bild);
     button.innerText = "välj mig";
+    pokemonContainer.appendChild(element);
   });
 });
