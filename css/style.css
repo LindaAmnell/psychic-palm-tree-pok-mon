@@ -1,32 +1,23 @@
 * {
   box-sizing: 0;
   margin: 0;
+  font-family: "Silkscreen", sans-serif;
+  color: black;
 }
-
 header {
-  background-color: rgb(241, 41, 41);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(245, 245, 249);
   height: 10em;
-  /* width: auto; */
-  border-bottom: solid black 5px;
 }
 body {
-  background-color: #eae5e5;
+  background-color: rgb(245, 245, 249);
 }
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.pokeboll {
-  background-color: white;
-  height: 8em;
-  width: 8em;
-  border-radius: 11em;
-  position: relative;
-  left: 7em;
-  top: 5em;
-  border: solid black 5px;
 }
 h1 {
   font-size: 40px;
@@ -42,6 +33,7 @@ h1 {
 }
 h2 {
   margin-top: 7em;
+  font-size: 20px;
 }
 #start-button {
   padding: 1em;
@@ -49,6 +41,6 @@ h2 {
   padding-right: 2em;
   margin: 2em;
   border-radius: 1em;
-  background-color: #9d9a9a;
+  background-color: rgb(241, 41, 41);
   color: white;
 }

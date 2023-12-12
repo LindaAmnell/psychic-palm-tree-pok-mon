@@ -4,13 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokèmon Search</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="serch-screen.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/serch-screen.css" />
+    <link rel="stylesheet" href="./css/pokemonboll.css" />
+    <link rel="stylesheet" href="./css/teamscreen.css" />
     <script type="module" src="script.js"></script>
   </head>
   <body>
     <header>
-      <div class="pokeboll"></div>
+      <div id="boll2">
+        <div class="pokeboll21"></div>
+        <div class="pokeboll1"></div>
+        <div class="pokeboll2"></div>
+      </div>
+      <div id="boll1">
+        <div class="pokeboll"></div>
+        <div class="pokeboll1"></div>
+        <div class="pokeboll2"></div>
+      </div>
+      <div id="boll3">
+        <div class="pokeboll31"></div>
+        <div class="pokeboll1"></div>
+        <div class="pokeboll2"></div>
+      </div>
     </header>
     <main>
       <section class="start-screen">
@@ -19,15 +40,30 @@
         <button id="start-button">Start</button>
       </section>
       <section class="search-screen">
+        <div class="btn">
+          <button>Exit</button> <button id="team-button">Ditt Team</button>
+        </div>
         <div class="search-container">
           <label id="pokèmon-search" for="search-pokémon"
             >Välj ut dina Pokémon här</label
           >
           <input id="search-pokémon" type="search" />
-          <button id="search-button">sök</button>
         </div>
         <div id="pokèmon">
           <ol id="pokèmon-list"></ol>
+        </div>
+      </section>
+      <section class="team-screen">
+        <div class="btn">
+          <button>Exit</button> <button id="back">Tillbaka</button>
+        </div>
+        <h2>Team</h2>
+        <div id="pokemon-team">
+          <ol id="p-team"></ol>
+        </div>
+        <h2>Reserver</h2>
+        <div id="reserve-team">
+          <ol id="r-team"></ol>
         </div>
       </section>
     </main>

@@ -1,0 +1,89 @@
+.search-screen,
+.team-screen {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  align-items: center;
+}
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn {
+  margin-bottom: 4em;
+}
+#pokèmon-search {
+  font-size: 20px;
+}
+#search-pokémon {
+  margin-top: 1em;
+  max-width: 15em;
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: #9d9a9a;
+  color: white;
+}
+.show {
+  display: flex;
+}
+#pokèmon {
+  background-color: #9d9a9a;
+  margin: 3em 2em 2em 2em;
+  padding: 0.5em;
+  border: double black 6px;
+}
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #6a7894;
+  color: white;
+  padding: 1em;
+  width: 220px;
+}
+/* li > img {
+  background: url("../bilder/backgrund.png") no-repeat;
+  background-size: contain;
+} */
+.element {
+  font-size: 14px;
+}
+.bild2 {
+  width: 40%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.bild {
+  width: 120px;
+  padding-top: 1em;
+  padding-bottom: 0.8em;
+}
+ol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  grid-gap: 1em;
+  padding: 1em;
+}
+.chose-button {
+}
+.nick-name-hide {
+  display: none;
+}
+
+.nick-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 2em;
+  position: fixed;
+  border: double black 6px;
+}
+.nick-name > input {
+  width: 10em;
+  margin: 1em;
+  color: black;
+}

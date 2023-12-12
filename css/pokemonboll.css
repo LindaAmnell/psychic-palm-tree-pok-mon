@@ -1,0 +1,72 @@
+#boll1,
+#boll2,
+#boll3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokeboll {
+  background: rgb(235, 2, 2);
+  height: 3em;
+  width: 6em;
+  border-top-right-radius: 4em;
+  border-top-left-radius: 4em;
+  border: solid rgb(66, 64, 64) 3px;
+}
+.pokeboll1 {
+  background: rgb(245, 245, 249);
+  border: solid 5px rgb(66, 64, 64);
+  height: 2em;
+  width: 2em;
+  border-radius: 10em;
+  position: absolute;
+}
+.pokeboll2 {
+  background: rgb(245, 245, 249);
+  height: 3em;
+  width: 6em;
+  border-bottom-right-radius: 4em;
+  border-bottom-left-radius: 4em;
+  border: solid rgb(66, 64, 64) 3px;
+}
+.pokeboll21 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 9%,
+    rgba(228, 226, 46, 1) 12%,
+    rgba(228, 226, 46, 1) 27%,
+    rgba(0, 0, 0, 1) 33%,
+    rgba(0, 0, 0, 1) 68%,
+    rgba(228, 226, 46, 1) 72%,
+    rgba(228, 226, 46, 1) 85%,
+    rgba(0, 0, 0, 1) 89%
+  );
+  height: 3em;
+  width: 6em;
+  border-top-right-radius: 4em;
+  border-top-left-radius: 4em;
+  border: solid rgb(66, 64, 64) 3px;
+}
+
+.pokeboll31 {
+  background: rgb(37, 71, 218);
+  background: linear-gradient(
+    90deg,
+    rgba(37, 71, 218, 1) 9%,
+    rgba(228, 46, 46, 1) 12%,
+    rgba(228, 46, 46, 1) 27%,
+    rgba(37, 71, 218, 1) 33%,
+    rgba(37, 71, 218, 1) 68%,
+    rgba(228, 46, 46, 1) 72%,
+    rgba(228, 46, 46, 1) 85%,
+    rgba(37, 71, 218, 1) 89%
+  );
+  height: 3em;
+  width: 6em;
+  border-top-right-radius: 4em;
+  border-top-left-radius: 4em;
+  border: solid rgb(66, 64, 64) 3px;
+}
