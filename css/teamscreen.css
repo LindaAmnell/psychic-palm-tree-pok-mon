@@ -1,15 +1,10 @@
-#pokemon-team {
+.pokemon-team,
+.reserve-team {
   background-color: #9d9a9a;
-  margin: 3em 2em 2em 2em;
+  margin-top: 1em;
   padding: 0.5em;
   border: double black 6px;
-}
-
-#reserve-team {
-  background-color: #9d9a9a;
-  margin: 3em 2em 2em 2em;
-  padding: 0.5em;
-  border: double black 6px;
+  display: none;
 }
 .team-screen > h2 {
   margin-top: 1em;
@@ -17,4 +12,10 @@
 
 .team-screen > .btn {
   margin-bottom: 1em;
+}
+.kick-button {
+  margin-bottom: 1em;
+}
+.show {
+  display: flex;
 }

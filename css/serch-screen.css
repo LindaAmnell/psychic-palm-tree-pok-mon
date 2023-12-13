@@ -11,7 +11,7 @@
   align-items: center;
 }
 .btn {
-  margin-bottom: 4em;
+  margin-bottom: 0.5em;
 }
 #pokèmon-search {
   font-size: 20px;
@@ -29,7 +29,7 @@
 }
 #pokèmon {
   background-color: #9d9a9a;
-  margin: 3em 2em 2em 2em;
+  margin-top: 3em;
   padding: 0.5em;
   border: double black 6px;
 }
@@ -39,13 +39,9 @@ li {
   align-items: center;
   background-color: #6a7894;
   color: white;
-  padding: 1em;
-  width: 220px;
+  padding-top: 1em;
+  width: 255px;
 }
-/* li > img {
-  background: url("../bilder/backgrund.png") no-repeat;
-  background-size: contain;
-} */
 .element {
   font-size: 14px;
 }
@@ -68,6 +64,7 @@ ol {
   padding: 1em;
 }
 .chose-button {
+  margin-bottom: 1em;
 }
 .nick-name-hide {
   display: none;
@@ -80,10 +77,29 @@ ol {
   background-color: antiquewhite;
   padding: 2em;
   position: fixed;
+  width: 11.19em;
   border: double black 6px;
 }
 .nick-name > input {
   width: 10em;
   margin: 1em;
   color: black;
+}
+
+.count-members {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+  height: 2em;
+  margin-bottom: 1em;
+}
+.count-members > p {
+  /* background-color: bisque; */
+  /* height: 2em;
+  width: 2em; */
+}
+.team-mates {
+  margin-bottom: 1em;
 }
