@@ -1,7 +1,8 @@
-#boll1,
 #boll2,
-#boll3 {
-  display: flex;
+#boll3,
+#boll1,
+#boll4 {
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -69,4 +70,17 @@
   border-top-right-radius: 4em;
   border-top-left-radius: 4em;
   border: solid rgb(66, 64, 64) 3px;
+}
+@media screen and (min-width: 590px) {
+  #boll2,
+  #boll3 {
+    display: flex;
+  }
+}
+@media screen and (min-width: 800px) {
+  #boll4,
+  #boll1 {
+    display: flex;
+    padding: 0.6em;
+  }
 }

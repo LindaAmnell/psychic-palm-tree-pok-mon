@@ -1,4 +1,9 @@
-.search-screen,
+.search-screen {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  align-items: center;
+}
 .team-screen {
   display: flex;
   flex-direction: column;
@@ -41,6 +46,7 @@ li {
   color: white;
   padding-top: 1em;
   width: 255px;
+  margin: 0.3em;
 }
 .element {
   font-size: 14px;
@@ -54,14 +60,17 @@ li {
   width: 120px;
   padding-top: 1em;
   padding-bottom: 0.8em;
+  background-image: url("../bilder/sd.png");
+  background-size: cover; /* Justera efter behov, t.ex. cover eller contain */
+  background-repeat: no-repeat;
 }
 ol {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
-  grid-gap: 1em;
-  padding: 1em;
+  padding: 0.5em;
+  max-width: 527px;
 }
 .chose-button {
   margin-bottom: 1em;
@@ -77,6 +86,8 @@ ol {
   background-color: antiquewhite;
   padding: 2em;
   position: fixed;
+  margin-left: 0.8em;
+  bottom: 13em;
   width: 11.19em;
   border: double black 6px;
 }
@@ -95,11 +106,20 @@ ol {
   height: 2em;
   margin-bottom: 1em;
 }
-.count-members > p {
-  /* background-color: bisque; */
-  /* height: 2em;
-  width: 2em; */
-}
 .team-mates {
   margin-bottom: 1em;
+}
+@media screen and (min-width: 590px) {
+  ol {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 600px) {
+  .nick-name {
+    position: fixed;
+    width: 25em;
+    margin-left: 2em;
+  }
 }

@@ -60,7 +60,7 @@ searchInput.addEventListener("keyup", async () => {
       nickName.appendChild(label);
       nickName.appendChild(inputNickName);
       nickName.appendChild(button);
-      pokemonContainer.append(nickName);
+      pokemonListaContainer.append(nickName);
       nickName.classList.add("nick-name");
       //   const someIndex = index;
       button.addEventListener("click", () => {
