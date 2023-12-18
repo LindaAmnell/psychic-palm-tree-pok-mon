@@ -5,6 +5,7 @@ const startScreen = document.querySelector(".start-screen");
 const searchScreen = document.querySelector(".search-screen");
 
 let pokemonList = [];
+let abilities = [];
 startbtn.addEventListener("click", async () => {
   startScreen.classList.add("hide");
   searchScreen.classList.add("show");
@@ -16,10 +17,17 @@ startbtn.addEventListener("click", async () => {
         data.results.map(async (pokemon) => {
           const response = await fetch(pokemon.url);
           const pokemonData = await response.json();
+
+          if (pokemonData.abilities && pokemonData.abilities.length > 0) {
+            abilities = pokemonData.abilities.map(
+              (abilityData) => abilityData.ability
+            );
+          }
           if (!pokemonData.sprites.front_default) {
             return {
               name: pokemon.name.toLowerCase(),
               url: pokemon.url,
+              abilities: abilities,
             };
           }
 
@@ -27,6 +35,7 @@ startbtn.addEventListener("click", async () => {
             name: pokemon.name.toLowerCase(),
             url: pokemon.url,
             bild: pokemonData.sprites.front_default,
+            abilities: abilities,
           };
         })
       );
@@ -36,4 +45,4 @@ startbtn.addEventListener("click", async () => {
     console.log("Något gick fel", error);
   }
 });
-export { startbtn, pokemonList, searchScreen };
+export { startbtn, pokemonList, searchScreen, abilities };

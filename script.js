@@ -1,4 +1,10 @@
-import { startbtn, pokemonList } from "./startScreen.js";
+import { fetchPokemonData } from "./URL.js";
+import {
+  startbtn,
+  pokemonList,
+  abilities,
+  searchScreen,
+} from "./startScreen.js";
 import {
   teamButton,
   pokemonTeamContainer,
@@ -25,6 +31,7 @@ searchInput.addEventListener("keyup", async () => {
     pokemon.name.includes(search)
   );
   console.log(searchInfo);
+  //   console.log(pokemon.abilties);
   pokemonContainer.innerText = "";
   searchInfo.forEach((pokemon, index) => {
     const element = document.createElement("li");
@@ -60,13 +67,20 @@ searchInput.addEventListener("keyup", async () => {
       nickName.appendChild(label);
       nickName.appendChild(inputNickName);
       nickName.appendChild(button);
-      pokemonListaContainer.append(nickName);
+      searchScreen.append(nickName);
       nickName.classList.add("nick-name");
-      //   const someIndex = index;
       button.addEventListener("click", () => {
-        addToTeamList({ name: inputNickName.value, bild: pokemon.bild }, index);
+        addToTeamList(
+          {
+            name: inputNickName.value,
+            bild: pokemon.bild,
+            abilities: pokemon.abilities,
+          },
+          index
+        );
         nickName.classList.remove("nick-name");
         nickName.classList.add("nick-name-hide");
+        console.log(teamList);
       });
     });
   });
@@ -103,8 +117,9 @@ function deletePokemon(pokemon, index) {
     reservList.push(pokemon);
     teamList.splice(index, 1);
     teamList.push(reservList[0]);
+    countReserv++;
     reservCount.innerText = countReserv;
-    teamMateContainer.classList.remove("hide");
+
     console.log("kllliiick 2");
     console.log(teamList);
     console.log(reservList);
@@ -121,7 +136,41 @@ function deletePokemonReserv(pokemon, index) {
     reservCount.innerText = countReserv;
   }
 }
+function movePokemonUp(pokemon) {
+  const index = teamList.indexOf(pokemon);
+  if (index > 0) {
+    const temp = teamList[index];
+    teamList[index] = teamList[index - 1];
+    teamList[index - 1] = temp;
+  }
+}
+function movePokemonDown(pokemon) {
+  const index = teamList.indexOf(pokemon);
+  if (index < teamList.length - 1) {
+    const temp = teamList[index];
+    teamList[index] = teamList[index + 1];
+    teamList[index + 1] = temp;
+  }
+}
+function movePokemonUpReserv(pokemon) {
+  const index = reservList.indexOf(pokemon);
+  if (index > 0) {
+    const temp = reservList[index];
+    reservList[index] = reservList[index - 1];
+    reservList[index - 1] = temp;
+  }
+}
+function movePokemonDownReserv(pokemon) {
+  const index = reservList.indexOf(pokemon);
+  if (index < reservList.length - 1) {
+    const temp = reservList[index];
+    reservList[index] = reservList[index + 1];
+    reservList[index + 1] = temp;
+  }
+}
+
 export {
+  movePokemonUp,
   pokemonContainer,
   pokemonListaContainer,
   teamList,
@@ -131,4 +180,7 @@ export {
   addToTeamList,
   deletePokemon,
   reservContainer,
+  movePokemonDown,
+  movePokemonDownReserv,
+  movePokemonUpReserv,
 };

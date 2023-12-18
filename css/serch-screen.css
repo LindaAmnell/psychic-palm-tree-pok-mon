@@ -33,20 +33,22 @@
   display: flex;
 }
 #pokèmon {
-  background-color: #9d9a9a;
   margin-top: 3em;
   padding: 0.5em;
   border: double black 6px;
+  background-image: url("../bilder/metal-background.jpg");
 }
 li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #6a7894;
+  background-color: #7b869f;
+  /* justify-content: flex-end; */
   color: white;
   padding-top: 1em;
   width: 255px;
-  margin: 0.3em;
+  margin: 0.2em;
+  border: double black 6px;
 }
 .element {
   font-size: 14px;
@@ -58,19 +60,20 @@ li {
 }
 .bild {
   width: 120px;
-  padding-top: 1em;
-  padding-bottom: 0.8em;
+  margin-top: 1em;
+
   background-image: url("../bilder/sd.png");
-  background-size: cover; /* Justera efter behov, t.ex. cover eller contain */
+  background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 1em;
 }
-ol {
+#pokèmon-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
   padding: 0.5em;
-  max-width: 527px;
+  max-width: 550px;
 }
 .chose-button {
   margin-bottom: 1em;
@@ -110,7 +113,7 @@ ol {
   margin-bottom: 1em;
 }
 @media screen and (min-width: 590px) {
-  ol {
+  #pokèmon-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -119,7 +122,6 @@ ol {
 @media screen and (min-width: 600px) {
   .nick-name {
     position: fixed;
-    width: 25em;
-    margin-left: 2em;
+    width: 20em;
   }
 }
