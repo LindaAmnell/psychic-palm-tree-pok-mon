@@ -40,13 +40,13 @@
   border-top-left-radius: 4em;
   border: solid rgb(0, 0, 0) 3px;
 }
-@media screen and (min-width: 590px) {
+@media screen and (min-width: 600px) {
   #boll2,
   #boll3 {
     display: flex;
   }
 }
-@media screen and (min-width: 825px) {
+@media screen and (min-width: 840px) {
   #boll4,
   #boll1 {
     display: flex;

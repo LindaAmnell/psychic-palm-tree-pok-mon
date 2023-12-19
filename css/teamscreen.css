@@ -56,21 +56,16 @@
 #p-team {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   list-style: none;
   padding: 0.5em;
-}
-
-#p-team > li {
 }
 #r-team {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   list-style: none;
   padding: 0.5em;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 956px) {
   #p-team {
     display: flex;
     flex-direction: row;

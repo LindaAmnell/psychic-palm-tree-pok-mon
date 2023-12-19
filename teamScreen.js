@@ -12,6 +12,7 @@ import {
   movePokemonUp,
   deletePokemon,
   deletePokemonReserv,
+  teamContainer,
 } from "./funktioner.js";
 import { createPokemonElement } from "./CreateElementFunktion.js";
 const teamScreen = document.querySelector(".team-screen");
@@ -82,6 +83,7 @@ backbutton.addEventListener("click", () => {
   teamScreen.classList.remove("show");
   pokemonContainer.innerText = "";
   searchInput.value = "";
+  teamContainer.classList.remove("show");
   pokemonListaContainer.classList.add("hide");
   pokemonListaContainer.classList.remove("show");
 });

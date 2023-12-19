@@ -112,4 +112,5 @@ export {
   deletePokemonReserv,
   movePokemonDown,
   movePokemonUp,
+  teamContainer,
 };

@@ -60,6 +60,8 @@ searchInput.addEventListener("keyup", async () => {
       label.innerText = "Smeknamn";
       inputNickName.type = "text";
       inputNickName.value = `${pokemon.name}`;
+      inputNickName.id = "nicknameInput";
+      label.setAttribute("for", "nicknameInput");
       nickName.appendChild(label);
       nickName.appendChild(inputNickName);
       nickName.appendChild(button);
@@ -74,8 +76,7 @@ searchInput.addEventListener("keyup", async () => {
           },
           index
         );
-        nickName.classList.remove("nick-name");
-        nickName.classList.add("nick-name-hide");
+        nickName.remove();
       });
       inputNickName.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {

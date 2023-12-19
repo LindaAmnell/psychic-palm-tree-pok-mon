@@ -25,8 +25,6 @@ main {
   flex-direction: column;
   justify-content: center;
   background-color: rgb(245, 245, 249);
-  max-width: 900px;
-  /* min-width: 500px; */
 }
 h1 {
   font-size: 30px;
@@ -72,7 +70,7 @@ h2 {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 956px) {
   body {
     background-color: rgb(199, 77, 77);
   }
@@ -80,8 +78,15 @@ h2 {
     background-color: rgb(199, 77, 77);
   }
   main {
-    max-width: 900px;
-    padding: 3em 7em 7em 7em;
+    width: 850px;
+    padding: 3em 1em 7em 1em;
+    border: solid black 30px;
+    border-radius: 1em;
+  }
+}
+@media screen and (min-width: 1180px) {
+  main {
+    padding: 3em 2em 7em 2em;
     border: solid black 30px;
     border-radius: 1em;
   }
