@@ -13,7 +13,6 @@ header {
   justify-content: center;
   background: rgb(245, 245, 249);
   height: 10em;
-  /* max-width: 800px; */
 }
 header > div > p {
   font-size: 30px;
@@ -27,6 +26,7 @@ main {
   justify-content: center;
   background-color: rgb(245, 245, 249);
   max-width: 900px;
+  min-width: 500px;
 }
 h1 {
   font-size: 30px;
@@ -80,7 +80,7 @@ h2 {
     background-color: rgb(199, 77, 77);
   }
   main {
-    width: 900px;
+    max-width: 900px;
     padding: 3em 1em 5em 1em;
     border: solid black 30px;
     border-radius: 1em;

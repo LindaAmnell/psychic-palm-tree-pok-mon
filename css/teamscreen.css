@@ -2,7 +2,6 @@
 .reserve-team {
   background-color: #9d9a9a;
   margin-top: 1em;
-  /* padding: 0.5em; */
   border: double black 6px;
   display: none;
   background-image: url("../bilder/metal-background.jpg");
@@ -41,9 +40,6 @@
 .show {
   display: flex;
 }
-.container-div {
-}
-
 .ability {
   color: white;
   margin-bottom: 0.7em;
@@ -51,6 +47,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 7em;
 }
 
 .ability-name {

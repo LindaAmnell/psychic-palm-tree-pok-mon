@@ -11,7 +11,6 @@ import {
   pokemonReserveContainer,
 } from "./teamScreen.js";
 import { addToTeamList } from "./funktioner.js";
-
 const searchInput = document.querySelector("#search-pokémon");
 const pokemonContainer = document.querySelector("#pokèmon-list");
 const pokemonListaContainer = document.querySelector("#pokèmon ");
@@ -27,7 +26,7 @@ searchInput.addEventListener("keyup", async () => {
   let searchInfo = pokemonList.filter((pokemon) =>
     pokemon.name.includes(search)
   );
-  console.log(searchInfo);
+
   pokemonContainer.innerText = "";
   searchInfo.forEach((pokemon, index) => {
     const element = document.createElement("li");
@@ -59,6 +58,7 @@ searchInput.addEventListener("keyup", async () => {
       const label = document.createElement("label");
       button.innerText = "spara";
       label.innerText = "Smeknamn";
+      inputNickName.type = "text";
       inputNickName.value = `${pokemon.name}`;
       nickName.appendChild(label);
       nickName.appendChild(inputNickName);
@@ -76,7 +76,6 @@ searchInput.addEventListener("keyup", async () => {
         );
         nickName.classList.remove("nick-name");
         nickName.classList.add("nick-name-hide");
-        console.log(teamList);
       });
       inputNickName.addEventListener("keydown", (event) => {
         if (event.key === "Enter") {

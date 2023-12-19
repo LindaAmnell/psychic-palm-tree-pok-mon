@@ -7,15 +7,13 @@ import {
   pokemonListaContainer,
 } from "./script.js";
 import {
+  restartGame,
+  movePokemonDown,
+  movePokemonUp,
   deletePokemon,
   deletePokemonReserv,
-  movePokemonDown,
-  movePokemonDownReserv,
-  movePokemonUp,
-  movePokemonUpReserv,
-  createPokemonElement,
-  restartGame,
 } from "./funktioner.js";
+import { createPokemonElement } from "./CreateElementFunktion.js";
 const teamScreen = document.querySelector(".team-screen");
 const teamButton = document.querySelector("#team-button");
 const backbutton = document.querySelector("#back");
@@ -42,14 +40,11 @@ function render() {
       render();
     });
     uppBotton.addEventListener("click", () => {
-      console.log("click");
-      console.log(teamList);
-      movePokemonUp(pokemon);
+      movePokemonUp(pokemon, teamList);
       render();
     });
     dowBotton.addEventListener("click", () => {
-      console.log("click1");
-      movePokemonDown(pokemon);
+      movePokemonDown(pokemon, teamList);
       render();
     });
   });
@@ -66,14 +61,11 @@ function render() {
       pokemonReserveContainer.removeChild(pokemonElement);
     });
     uppBotton.addEventListener("click", () => {
-      console.log("click");
-      console.log(reservList);
-      movePokemonUpReserv(pokemon);
+      movePokemonUp(pokemon, reservList);
       render();
     });
     dowBotton.addEventListener("click", () => {
-      console.log("click1");
-      movePokemonDownReserv(pokemon);
+      movePokemonDown(pokemon, reservList);
       render();
     });
   });
@@ -82,14 +74,9 @@ function render() {
 teamButton.addEventListener("click", () => {
   render();
 });
-exitButton.addEventListener("click", () => {
-  console.log("click");
-  restartGame();
-});
-exitButton2.addEventListener("click", () => {
-  console.log("click1");
-  restartGame();
-});
+exitButton.addEventListener("click", restartGame);
+exitButton2.addEventListener("click", restartGame);
+
 backbutton.addEventListener("click", () => {
   searchScreen.classList.add("show");
   teamScreen.classList.remove("show");

@@ -40,15 +40,6 @@
   border-top-left-radius: 4em;
   border: solid rgb(0, 0, 0) 3px;
 }
-
-.pokeboll31 {
-  background: rgb(223, 235, 2);
-  height: 3em;
-  width: 6em;
-  border-top-right-radius: 4em;
-  border-top-left-radius: 4em;
-  border: solid rgb(0, 0, 0) 3px;
-}
 @media screen and (min-width: 590px) {
   #boll2,
   #boll3 {
