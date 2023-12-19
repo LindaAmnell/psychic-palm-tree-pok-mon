@@ -1,5 +1,11 @@
 import { pokemonList, searchScreen, abilities } from "./startScreen.js";
-import { teamList, reservList } from "./script.js";
+import {
+  teamList,
+  reservList,
+  searchInput,
+  pokemonContainer,
+  pokemonListaContainer,
+} from "./script.js";
 import {
   deletePokemon,
   deletePokemonReserv,
@@ -84,14 +90,17 @@ exitButton2.addEventListener("click", () => {
   console.log("click1");
   restartGame();
 });
+backbutton.addEventListener("click", () => {
+  searchScreen.classList.add("show");
+  teamScreen.classList.remove("show");
+  pokemonContainer.innerText = "";
+  searchInput.value = "";
+  pokemonListaContainer.classList.add("hide");
+  pokemonListaContainer.classList.remove("show");
+});
 export {
   teamButton,
   pokemonTeamContainer,
   pokemonReserveContainer,
   teamScreen,
 };
-
-backbutton.addEventListener("click", () => {
-  searchScreen.classList.add("show");
-  teamScreen.classList.remove("show");
-});
