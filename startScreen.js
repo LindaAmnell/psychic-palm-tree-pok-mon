@@ -1,48 +1,49 @@
+import { getPokemon, fetchPokemonData } from "./URL.js";
+import { pokemonListaContainer } from "./script.js";
 const startbtn = document.querySelector("#start-button");
 const startScreen = document.querySelector(".start-screen");
 const searchScreen = document.querySelector(".search-screen");
-let pokemonList = [];
 
-async function getPokemon() {
-  const url = `https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0`;
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
-}
-async function createPokemonObject(pokemon, data2) {
-  if (data2.sprites.front_default) {
-    return {
-      name: pokemon.name.toLowerCase(),
-      url: pokemon.url,
-      bild: data2.sprites.front_default,
-    };
-  }
-  return null;
-}
+
+let pokemonList = [];
+let abilities = [];
 startbtn.addEventListener("click", async () => {
   startScreen.classList.add("hide");
   searchScreen.classList.add("show");
+  pokemonListaContainer.classList.add("hide");
   try {
     const data = await getPokemon();
-
     if (data.results && data.results.length > 0) {
       pokemonList = await Promise.all(
         data.results.map(async (pokemon) => {
-          try {
-            const url2 = pokemon.url;
-            const response2 = await fetch(url2);
-            const data2 = await response2.json();
-            return createPokemonObject(pokemon, data2);
-          } catch (error) {
-            console.log("Något gick fel igen", error);
-            return null;
+          const response = await fetch(pokemon.url);
+          const pokemonData = await response.json();
+
+          if (pokemonData.abilities && pokemonData.abilities.length > 0) {
+            abilities = pokemonData.abilities.map(
+              (abilityData) => abilityData.ability
+            );
           }
+          if (!pokemonData.sprites.front_default) {
+            return {
+              name: pokemon.name.toLowerCase(),
+              url: pokemon.url,
+              abilities: abilities,
+            };
+          }
+
+          return {
+            name: pokemon.name.toLowerCase(),
+            url: pokemon.url,
+            bild: pokemonData.sprites.front_default,
+            abilities: abilities,
+          };
         })
       );
     }
+    await fetchPokemonData(pokemonList);
   } catch (error) {
     console.log("Något gick fel", error);
   }
 });
-
-export { startbtn, pokemonList, createPokemonObject };
+export { startbtn, pokemonList, searchScreen, abilities, startScreen };
