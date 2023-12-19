@@ -26,7 +26,7 @@ main {
   justify-content: center;
   background-color: rgb(245, 245, 249);
   max-width: 900px;
-  min-width: 500px;
+  /* min-width: 500px; */
 }
 h1 {
   font-size: 30px;
@@ -81,7 +81,7 @@ h2 {
   }
   main {
     max-width: 900px;
-    padding: 3em 1em 5em 1em;
+    padding: 3em 7em 7em 7em;
     border: solid black 30px;
     border-radius: 1em;
   }
