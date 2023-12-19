@@ -1,21 +1,24 @@
 import { pokemonList, searchScreen, abilities } from "./startScreen.js";
+import { teamList, reservList } from "./script.js";
 import {
-  teamList,
-  reservList,
-  deletePokemonReserv,
-  addToTeamList,
   deletePokemon,
-  reservContainer,
-  movePokemonUp,
+  deletePokemonReserv,
   movePokemonDown,
   movePokemonDownReserv,
+  movePokemonUp,
   movePokemonUpReserv,
-} from "./script.js";
+  createPokemonElement,
+  restartGame,
+} from "./funktioner.js";
 const teamScreen = document.querySelector(".team-screen");
 const teamButton = document.querySelector("#team-button");
 const backbutton = document.querySelector("#back");
 const pokemonTeamContainer = document.querySelector("#p-team");
 const pokemonReserveContainer = document.querySelector("#r-team");
+const exitButton = document.querySelector("#quit");
+const exitButton2 = document.querySelector("#quit2");
+
+// uppdaterar ordningen/infon på pokemonen i listorna när man raderat eller ändrat ordning
 function render() {
   searchScreen.classList.remove("show");
   teamScreen.classList.add("show");
@@ -73,50 +76,22 @@ function render() {
 teamButton.addEventListener("click", () => {
   render();
 });
-export { teamButton, pokemonTeamContainer, pokemonReserveContainer };
+exitButton.addEventListener("click", () => {
+  console.log("click");
+  restartGame();
+});
+exitButton2.addEventListener("click", () => {
+  console.log("click1");
+  restartGame();
+});
+export {
+  teamButton,
+  pokemonTeamContainer,
+  pokemonReserveContainer,
+  teamScreen,
+};
 
 backbutton.addEventListener("click", () => {
   searchScreen.classList.add("show");
   teamScreen.classList.remove("show");
 });
-
-function createPokemonElement(pokemon) {
-  const element = document.createElement("li");
-  const button = document.createElement("button");
-  const pelement = document.createElement("p");
-  const divContainer = document.createElement("div");
-  const moveButtonUpp = document.createElement("button");
-  const moveButtonDown = document.createElement("button");
-  element.classList.add("element");
-  button.classList.add("kick-button");
-  moveButtonDown.classList.add("move-btn-down");
-  moveButtonUpp.classList.add("move-btn-upp");
-  moveButtonUpp.innerText = "Flytta upp";
-  moveButtonDown.innerText = "Flytta ner";
-  divContainer.classList.add("container-div");
-  const bild = document.createElement("img");
-  bild.src = `${pokemon.bild}`;
-  element.innerText = `${pokemon.name}`.toUpperCase();
-  button.innerText = "kicka";
-  pelement.innerText = "Abilitys:";
-  pelement.classList.add("ability");
-  if (pokemon.abilities && pokemon.abilities.length > 0) {
-    pokemon.abilities.forEach((ability) => {
-      const abilityName = ability.name;
-      const abilityParagraph = document.createElement("p");
-      abilityParagraph.innerText = `${abilityName}`;
-      abilityParagraph.classList.add("ability-name");
-      pelement.appendChild(abilityParagraph);
-    });
-  }
-
-  element.appendChild(bild);
-  element.appendChild(pelement);
-  element.appendChild(button);
-  element.appendChild(divContainer);
-  divContainer.appendChild(moveButtonDown);
-  divContainer.appendChild(moveButtonUpp);
-
-  bild.classList.add("bild");
-  return element;
-}

@@ -45,4 +45,4 @@ startbtn.addEventListener("click", async () => {
     console.log("Något gick fel", error);
   }
 });
-export { startbtn, pokemonList, searchScreen, abilities };
+export { startbtn, pokemonList, searchScreen, abilities, startScreen };

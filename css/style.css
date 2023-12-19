@@ -52,6 +52,10 @@ h2 {
   border-radius: 1em;
   background-color: rgb(241, 41, 41);
   color: white;
+  transition: ease-in-out 0.4s;
+}
+#start-button:hover {
+  background-color: #6b6868;
 }
 
 @media screen and (min-width: 590px) {

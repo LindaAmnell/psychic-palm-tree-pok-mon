@@ -18,6 +18,10 @@
 .btn {
   margin-bottom: 0.5em;
 }
+.btn > button:hover {
+  background-color: #9d9a9a;
+  transition: ease-in 0.4s;
+}
 #pokèmon-search {
   font-size: 20px;
 }
@@ -78,6 +82,10 @@ li {
 .chose-button {
   margin-bottom: 1em;
 }
+.chose-button:hover {
+  background-color: #b0acac;
+  transition: ease-in-out 0.4s;
+}
 .nick-name-hide {
   display: none;
 }
@@ -98,6 +106,10 @@ li {
   width: 10em;
   margin: 1em;
   color: black;
+}
+.nick-name > button:hover {
+  background-color: #b0acac;
+  transition: ease-in-out 0.4s;
 }
 
 .count-members {
