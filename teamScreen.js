@@ -88,9 +88,6 @@ backbutton.addEventListener("click", () => {
   searchInput.value = "";
   pokemonListaContainer.classList.add("hide");
   pokemonListaContainer.classList.remove("show");
-  //   if (teamList.length === 0) {
-  //     teamContainer.classList.remove("show");
-  //   }
 });
 export {
   teamButton,
