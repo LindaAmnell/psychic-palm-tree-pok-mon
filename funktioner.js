@@ -29,6 +29,7 @@ function addToTeamList(pokemon, index) {
     teamCount.innerText = countTeam;
     neadCountTeam.innerText = countNeadTeam;
     teamContainer.classList.add("show");
+
     if (teamList.length == 3) {
       teamMateContainer.classList.add("hide");
     }

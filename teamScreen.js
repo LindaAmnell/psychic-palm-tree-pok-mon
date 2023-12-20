@@ -38,6 +38,9 @@ function render() {
     button.addEventListener("click", () => {
       deletePokemon(pokemon, index);
       deletePokemonReserv(pokemon);
+      if (teamList.length === 0) {
+        teamContainer.classList.remove("show");
+      }
       render();
     });
     uppBotton.addEventListener("click", () => {
@@ -83,9 +86,11 @@ backbutton.addEventListener("click", () => {
   teamScreen.classList.remove("show");
   pokemonContainer.innerText = "";
   searchInput.value = "";
-  teamContainer.classList.remove("show");
   pokemonListaContainer.classList.add("hide");
   pokemonListaContainer.classList.remove("show");
+  //   if (teamList.length === 0) {
+  //     teamContainer.classList.remove("show");
+  //   }
 });
 export {
   teamButton,
