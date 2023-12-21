@@ -67,6 +67,7 @@ searchInput.addEventListener("keyup", async () => {
       nickName.appendChild(button);
       searchScreen.append(nickName);
       nickName.classList.add("nick-name");
+      inputNickName.focus();
       button.addEventListener("click", () => {
         addToTeamList(
           {
